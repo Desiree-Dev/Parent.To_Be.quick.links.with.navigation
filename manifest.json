@@ -1,0 +1,139 @@
+{
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "Parent.To_Be.quick.links.with.navigation",
+		"type": "card",
+		"title": "Parent to Be with Navigation",
+		"subTitle": "Sample of a List with Quick Links",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"shortTitle": "A short title for this Card",
+		"info": "Additional information about this Card",
+		"description": "A long description for this Card",
+		"tags": {
+			"keywords": [
+				"List",
+				"Link",
+				"Card",
+				"Sample"
+			]
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://list"
+		}
+	},
+	"sap.platform.mobilecards": {
+	    "compatible": true
+	},
+	"sap.card": {
+		"type": "List",
+		"header": {
+		"title": "Parent To Be Tool Kit",
+		"subTitle": "Being a parent? All you need in one place",
+		"icon": {
+		  "src": "sap-icon://manager"
+		},
+			"actions": [
+				{
+					"type": "Navigation",
+					"parameters": {
+						"url": "/quickLinks"
+					}
+				}
+			]
+		},
+		"content": {
+			"data": {
+				"json": [
+					{
+						"Name": "Apply for Leave",
+						"icon": "sap-icon://general-leave-request",
+						"url": "/careers",
+						"Description": "Manage your time off periods",
+						"Sales": "Powered by SAP SuccessFactors",
+						"State": "Success",
+						"Highlight": "Information",
+						"SemanticObject": "TimeOff",
+						"Action": "request"
+					},
+					{
+						"Name": "Development Plan Update",
+						"icon": "sap-icon://target-group",
+						"url": "/careers",
+						"Description": "Adapt your career track to fit your life changes",
+						"Sales": "Powered by SAP SuccessFactors",
+						"State": "Success",
+						"Highlight": "Information",
+						"SemanticObject": "Devplan",
+						"Action": "access"
+					},
+					{
+						"Name": "Healthy Pregnancy Program Registration",
+						"icon": "sap-icon://stethoscope",
+						"url": "/careers",
+						"Description": "Sign up for that special program, that keeps you healthy",
+						"Sales": "External link",
+						"State": "Success",
+						"Highlight": "Information",
+						"SemanticObject": "Health",
+						"Action": "show"
+					},
+					{
+						"Name": "Leave Certification Form",
+						"icon": "sap-icon://approvals",
+						"url": "https://employeeworkzone.workzone.cfapps.us10.hana.ondemand.com/site#workzone-admin&/groups/eMDDVUTh0EpM2FKvV6ieKD/documents/V0oR14kDT8mGRBPr91XwCz/slide_viewer?_lightbox=true",
+						"Description": "Please have it filled out by your physician ",
+						"Sales": "Official Form",
+						"State": "Success",
+						"Highlight": "Information",
+						"SemanticObject": "LeaveCertification",
+						"Action": "Form"
+					},
+					{
+						"Name": "Parental Leave Workspace",
+						"icon": "sap-icon://customer-view",
+						"url": "/careers",
+						"Description": "Guide you along your journey of being a working parent",
+						"Sales": "Public ACME Food Workspace",
+						"State": "Success",
+						"Highlight": "Information",
+						"SemanticObject": "ParentalLeave",
+						"Action": "Workspace"
+					}
+				]
+			},
+			"item": {
+				"icon": {
+					"src": "{icon}"
+				},
+				"highlight": "{Highlight}",
+				"title": "{Name}",
+				"description": "{Description}",
+				"info": {
+					"value": "{Sales}",
+					"value2": "{Sales2}",
+					"state": "{State}"
+				},
+				"actions": [
+					{
+						"type": "Navigation",
+						"enabled": "{= ${url}}",
+						"parameters": {
+						    "ibnTarget": {
+						            "semanticObject": "{SemanticObject}",
+						            "action": "{Action}"
+						    },
+						    "url": "{url}"
+						  
+						    
+						}
+					}
+				]
+			}
+		}
+	}
+}
